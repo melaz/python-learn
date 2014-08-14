@@ -21,7 +21,7 @@ response = br.open('http://my.kievnet.ua/index.php')
 # print response.read
 br.select_form(nr=0)
 br["u_login"] = "melaz"
-br["pass"] = "4hihndwi"
+br["pass"] = ""
 # Submit form
 br.submit()
 #forms = ParseResponse(test.read)
