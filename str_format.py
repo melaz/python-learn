@@ -13,7 +13,7 @@ print ('b')
 
 print('''TEST \
 ETST'
-ETSET
+ETSET    fbfbfb
 SETET''')
 
 print('new \n w')
