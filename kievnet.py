@@ -2,6 +2,8 @@ __author__ = 'Dmitry'
 import cookielib, shutil, os
 
 from mechanize import Browser, ParseResponse
+from BeautifulSoup import BeautifulSoup
+import html2text
 
 br = Browser()
 br._factory.encoding= "windows"
@@ -28,8 +30,19 @@ br.submit()
 #print (forms)
 test = br.response().read()
 u = test.decode('windows-1251')
-print(u)
+soup = BeautifulSoup(u)
+#soup = soup.prettify()
+#print(soup.body())
+#for i in soup.body:
+#    print i
+#a = soup.find_all('')
+a= soup.findAll('tr')
+#firstPTag, secondPTag = soup.findAll('td')
+#print (a.)
+for i in soup.findAll('tr'):
+    if i coprint (i)
+
 #test.encode('cp1251')
-br.open('http://my.kievnet.ua/index.php?mode=page&_pn=6')
-test2 = br.response().read()
-print (test2.decode('windows-1251'))
+#br.open('http://my.kievnet.ua/index.php?mode=page&_pn=6')
+#test2 = br.response().read()
+#print (test2.decode('windows-1251'))
