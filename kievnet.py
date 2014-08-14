@@ -16,7 +16,7 @@ br.addheaders = [('User-agent', 'Mozilla/5.0 (X11; U; Linux i686; ru-RU; rv:1.9.
 # Open url in Browser instance
 response = br.open('http://my.kievnet.ua/index.php')
 
-br.encoding="windows-1251"
+#br.encoding="windows-1251"
 # Select form for modification and "enter" login info
 # print response.read
 br.select_form(nr=0)
@@ -27,7 +27,9 @@ br.submit()
 #forms = ParseResponse(test.read)
 #print (forms)
 test = br.response().read()
-#test.encode('cp1251')
-
 u = test.decode('windows-1251')
 print(u)
+#test.encode('cp1251')
+br.open('http://my.kievnet.ua/index.php?mode=page&_pn=6')
+test2 = br.response().read()
+print (test2.decode('windows-1251'))
